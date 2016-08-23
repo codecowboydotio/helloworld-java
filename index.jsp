@@ -5,6 +5,7 @@
           <%! String message = "Hello, World!"; %> 
           <h1><%= message%> </h1>
           Today's date: <%= new Date() %>
+	  Server host name is: <%=request.getServerName() %>
 	  <BR>
 	  <BR>
 	  Java Version: <%= System.getProperty("java.version") %>
