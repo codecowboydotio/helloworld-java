@@ -7,7 +7,7 @@
           Today's date: <%= new Date() %>
 	  <BR>
 	  <BR>
-	  Server host name is: <%=request.getServerName() %>
+	  Server Address is: <%=request.getServerName() %>
 	  <BR>
 	  <BR>
 	  Java Version: <%= System.getProperty("java.version") %>
