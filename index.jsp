@@ -1,20 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
 <html>
-     <head><title>Hello World</title></head>	
+     <head><title>JSP Test App</title></head>
      <body>
-          <%! String message = "Hello, World!"; %> 
-          <h1><%= message%> </h1>
+          <%! String message = "JSP Test App"; %>
+          <H1><%= message%> </H1>
           Today's date: <%= new Date() %>
-	  <BR>
-	  <BR>
-	  Server Address is: <%=request.getServerName() %>
-	  <BR>
-	  <BR>
-	  Java Version: <%= System.getProperty("java.version") %>
-	  <BR>
-	  <BR>
-	  Operating System Name: <%= System.getProperty("os.name") %>
-	  <BR>
-	  Operating System Version: <%= System.getProperty("os.version") %>
+          <BR>
+          <BR>
+          Server Address is: <%=request.getServerName() %>
+          <BR>
+          <BR>
+          Java Version: <%= System.getProperty("java.version") %>
+          <BR>
+          <BR>
+          <p style="color:#FF0000";>App Server: <STRONG><%= application.getServerInfo() %></STRONG></p>
+          <BR>
+          Servlet Version: <%= application.getMajorVersion() %>.<%= application.getMinorVersion() %>
+          <BR>
+          <BR>
+          JSP Version: <%= JspFactory.getDefaultFactory().getEngineInfo().getSpecificationVersion() %> <br>
      </body>
 </html>
