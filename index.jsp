@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
 <html>
-     <head><title>JSP Test App</title></head>
+     <head>
+          <title>JSP Test App</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+     </head>
      <body>
           <%! String message = "JSP Test App"; %>
           <H1><%= message%> </H1>
