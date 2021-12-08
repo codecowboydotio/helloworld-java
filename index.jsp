@@ -6,7 +6,7 @@
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
      </head>
      <body>
-          <%! String message = "JSP Test App"; %>
+          <%! String message = "A JSP Test App"; %>
           <H1><%= message%> </H1>
           Today's date: <%= new Date() %>
           <BR>
