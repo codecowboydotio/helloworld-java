@@ -1,0 +1,14 @@
+name: GitHub Actions Deploy to unit
+on: [push]
+jobs:
+  Deploy-to-Unit:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        env:
+          UNIT_SERVER: ${{ secrets.UNIT_SERVER }}
+        run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          curl -s -X POST http://$UNIT_SERVER:8080/pull -d '{ "branch":"main", "dest":"/www/jsp", "repo":"http://github.com/${{ github.repository }}" }'
+          echo "🍏 This job's status is ${{ job.status }}."
